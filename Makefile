@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aelkheta <aelkheta@student.42.fr>          +#+  +:+       +#+         #
+#    By: aelkheta <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/25 09:08:24 by aelkheta          #+#    #+#              #
-#    Updated: 2023/11/26 18:35:27 by aelkheta         ###   ########.fr        #
+#    Created: 2023/11/27 15:17:58 by aelkheta          #+#    #+#              #
+#    Updated: 2023/11/27 15:18:00 by aelkheta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libftprintf.a
 CC = cc

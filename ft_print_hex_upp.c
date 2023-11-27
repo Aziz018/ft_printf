@@ -5,26 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkheta <aelkheta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 09:12:31 by aelkheta          #+#    #+#             */
-/*   Updated: 2023/11/27 13:06:11 by aelkheta         ###   ########.fr       */
+/*   Created: 2023/11/27 15:16:45 by aelkheta          #+#    #+#             */
+/*   Updated: 2023/11/27 15:19:44 by aelkheta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_hex_upp(unsigned int x)
+int	ft_print_hex_upp(unsigned int x)
 {
-    int counter;
+	int		counter;
+	char	*s;
 
-    counter = 0;
-    char s[] = "0123456789ABCDEF";
-
-    if(x < 16)
-        counter += ft_print_char(s[x]);
-    else
-    {
-        counter += ft_print_hex_upp(x / 16);
-        counter += ft_print_char(s[x % 16]);
-    }
-    return counter; 
-}   
+	s = "0123456789ABCDEF";
+	counter = 0;
+	if (x < 16)
+		counter += ft_print_char(s[x]);
+	else
+	{
+		counter += ft_print_hex_upp(x / 16);
+		counter += ft_print_char(s[x % 16]);
+	}
+	return (counter);
+}
