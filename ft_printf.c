@@ -31,6 +31,8 @@ static int	check_specifier(char format, va_list args)
 		counter += ft_print_hex_upp(va_arg(args, int));
 	else if (format == 'p')
 		counter += ft_print_address(va_arg(args, void *));
+	else
+		counter += ft_print_char(format);
 	return (counter);
 }
 
