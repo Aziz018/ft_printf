@@ -6,17 +6,14 @@
 /*   By: aelkheta <aelkheta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:17:43 by aelkheta          #+#    #+#             */
-/*   Updated: 2023/11/27 15:20:20 by aelkheta         ###   ########.fr       */
+/*   Updated: 2023/11/28 11:14:02 by aelkheta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <limits.h>
 # include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
 
 int	ft_printf(const char *format, ...);

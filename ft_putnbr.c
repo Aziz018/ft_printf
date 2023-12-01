@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelkheta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aelkheta <aelkheta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:16:55 by aelkheta          #+#    #+#             */
-/*   Updated: 2023/11/27 15:16:59 by aelkheta         ###   ########.fr       */
+/*   Updated: 2023/11/28 11:13:47 by aelkheta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_putnbr(int n)
 	int	counter;
 
 	counter = 0;
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		counter += write(1, "-2147483648", 11);
 	else if (n < 0)
 	{

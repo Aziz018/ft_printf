@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelkheta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aelkheta <aelkheta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:16:09 by aelkheta          #+#    #+#             */
-/*   Updated: 2023/11/27 15:16:11 by aelkheta         ###   ########.fr       */
+/*   Updated: 2023/12/01 18:05:21 by aelkheta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static int	check_specifier(char format, va_list args)
 	else if (format == 's')
 		counter += ft_print_str(va_arg(args, char *));
 	else if (format == 'x')
-		counter += ft_print_hex_low(va_arg(args, int));
+		counter += ft_print_hex_low(va_arg(args, unsigned int));
 	else if (format == 'X')
-		counter += ft_print_hex_upp(va_arg(args, int));
+		counter += ft_print_hex_upp(va_arg(args, unsigned int));
 	else if (format == 'p')
 		counter += ft_print_address(va_arg(args, void *));
 	else
@@ -45,7 +45,7 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	counter = 0;
 	va_start(args, format);
-	if (!format)
+	if (!format || (*(format + 1) && *format == '%' && *(format + 1) == '\0'))
 		return (-1);
 	while (format[i])
 	{
